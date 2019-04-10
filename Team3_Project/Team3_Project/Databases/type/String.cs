@@ -1,16 +1,19 @@
 ﻿namespace Team3_Project.Databases.type {
 	public class String : abstraction {
 		public static String[] collection(subroutine subroutine , System.Object[] initialize) {
-			return collection((superclass item) => (String) item , () => new String() , subroutine , initialize);
+			return collection((superclass item) => (String) item , () => new String("") , subroutine , initialize);
 		}
 		public static String individual(subroutine subroutine , System.Object[] initialize) {
-			return individual((superclass item) => (String) item , () => new String() , subroutine , initialize);
+			return individual((superclass item) => (String) item , () => new String("") , subroutine , initialize);
 		}
+		public System.String name;
 		public System.String value;
-		public String() {
+		public String(System.String name) {
+			this.name = name;
 			this.value = System.String.Empty;
 		}
-		public String(System.String value) {
+		public String(System.String name , System.String value) {
+			this.name = name;
 			this.value = value;
 		}
 		public override System.Boolean Equals(System.Object Object) {

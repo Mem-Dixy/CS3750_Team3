@@ -1,16 +1,19 @@
 ﻿namespace Team3_Project.Databases.type {
 	public class Byte : abstraction {
 		public static Byte[] collection(subroutine subroutine , System.Object[] initialize) {
-			return collection((superclass item) => (Byte) item , () => new Byte() , subroutine , initialize);
+			return collection((superclass item) => (Byte) item , () => new Byte("") , subroutine , initialize);
 		}
 		public static Byte individual(subroutine subroutine , System.Object[] initialize) {
-			return individual((superclass item) => (Byte) item , () => new Byte() , subroutine , initialize);
+			return individual((superclass item) => (Byte) item , () => new Byte("") , subroutine , initialize);
 		}
+		public System.String name;
 		public System.Byte value;
-		public Byte() {
+		public Byte(System.String name) {
+			this.name = name;
 			this.value = 0;
 		}
-		public Byte(System.Byte value) {
+		public Byte(System.String name , System.Byte value) {
+			this.name = name;
 			this.value = value;
 		}
 		public override System.Boolean Equals(System.Object Object) {

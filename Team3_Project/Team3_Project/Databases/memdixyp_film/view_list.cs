@@ -17,12 +17,12 @@
 		public type.String primaryTitle;
 		public type.Int16 startYear;
 		public type.String poster;
-		private view_list() : base(nameof(memdixyp_film) , nameof(view_list)) {
-			this.list = new type.Int32();
-			this.tconst = new type.String();
-			this.primaryTitle = new type.String();
-			this.startYear = new type.Int16();
-			this.poster = new type.String();
+		private view_list() : base("memdixyp_film" , "view_list") {
+			this.list = new type.Int32("list");
+			this.tconst = new type.String("tconst");
+			this.primaryTitle = new type.String("primaryTitle");
+			this.startYear = new type.Int16("startYear");
+			this.poster = new type.String("poster");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {

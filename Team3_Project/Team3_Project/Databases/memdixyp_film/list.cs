@@ -16,11 +16,11 @@
 		public type.Int32 user;
 		public type.String name;
 		public type.Boolean hidden;
-		private list() : base(nameof(memdixyp_film) , nameof(list)) {
-			this.identifier = new type.Int32();
-			this.user = new type.Int32();
-			this.name = new type.String();
-			this.hidden = new type.Boolean();
+		private list() : base("memdixyp_film" , "list") {
+			this.identifier = new type.Int32("identifier");
+			this.user = new type.Int32("user");
+			this.name = new type.String("name");
+			this.hidden = new type.Boolean("hidden");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {

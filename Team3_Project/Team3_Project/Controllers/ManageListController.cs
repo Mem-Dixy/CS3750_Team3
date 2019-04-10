@@ -2,7 +2,7 @@
 	public class ManageListController : System.Web.Mvc.Controller {
 		// GET: ManageList
 		public System.Web.Mvc.ActionResult ManageLists(System.String id = "1") {
-			Databases.type.Int32 identifier = new Databases.type.Int32(1);
+			Databases.type.Int32 identifier = new Databases.type.Int32("", 1);
 			identifier.parse(id);
 			this.ViewBag.identifier = identifier.value;
 			this.ViewBag.list = Databases.memdixyp_film.list.get_list_by_id(identifier.value);

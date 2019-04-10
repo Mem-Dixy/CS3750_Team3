@@ -14,9 +14,9 @@
 		}
 		public type.Int32 user;
 		public type.Int32 list;
-		private list_follow() : base(nameof(memdixyp_film) , nameof(list_follow)) {
-			this.user = new type.Int32();
-			this.list = new type.Int32();
+		private list_follow() : base("memdixyp_film" , "list_follow") {
+			this.user = new type.Int32("user");
+			this.list = new type.Int32("list");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {

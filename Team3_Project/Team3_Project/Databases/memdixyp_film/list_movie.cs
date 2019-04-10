@@ -15,10 +15,10 @@
 		public type.Int32 list;
 		public type.String movie;
 		public type.DateTime added;
-		private list_movie() : base(nameof(memdixyp_film) , nameof(list_movie)) {
-			this.list = new type.Int32();
-			this.movie = new type.String();
-			this.added = new type.DateTime();
+		private list_movie() : base("memdixyp_film" , "list_movie") {
+			this.list = new type.Int32("list");
+			this.movie = new type.String("movie");
+			this.added = new type.DateTime("added");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {
@@ -41,9 +41,9 @@
 			list_movie.added.form(NameValueCollection , nameof(list_movie.added));
 			individual(insert , new System.Object[] { list_movie });
 		}
-		public static void delete_collection(type.Int32 list, type.String[] movie) {
+		public static void delete_collection(type.Int32 list , type.String[] movie) {
 			System.Text.StringBuilder StringBuilder = new System.Text.StringBuilder();
-			StringBuilder.Append(self.COLUMN(new System.String[] {nameof(list)}));
+			StringBuilder.Append(self.COLUMN(new System.String[] { nameof(list) }));
 			StringBuilder.Append(unicode.EQUALS_SIGN);
 			StringBuilder.Append(self.STRING_LITERAL(list.ToString()));
 			StringBuilder.Append(unicode.SPACE);

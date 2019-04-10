@@ -16,11 +16,11 @@
 		public type.String name;
 		public type.String password;
 		public type.String email;
-		private user() : base(nameof(memdixyp_film) , nameof(user)) {
-			this.identifier = new type.Int32();
-			this.name = new type.String();
-			this.password = new type.String();
-			this.email = new type.String();
+		private user() : base("memdixyp_film" , "user") {
+			this.identifier = new type.Int32("identifier");
+			this.name = new type.String("name");
+			this.password = new type.String("password");
+			this.email = new type.String("email");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {
@@ -40,9 +40,9 @@
 		}
 		public static void insert_individual(System.String name , System.String password , System.String email) {
 			user user = new user {
-				name = new type.String(name) ,
-				password = new type.String(password) ,
-				email = new type.String(email)
+				name = new type.String("" , name) ,
+				password = new type.String("" , password) ,
+				email = new type.String("" , email)
 			};
 			individual(insert , new System.Object[] { user });
 		}

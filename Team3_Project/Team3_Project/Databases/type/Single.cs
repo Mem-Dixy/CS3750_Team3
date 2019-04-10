@@ -1,16 +1,19 @@
 ﻿namespace Team3_Project.Databases.type {
 	public class Single : abstraction {
 		public static Single[] collection(subroutine subroutine , System.Object[] initialize) {
-			return collection((superclass item) => (Single) item , () => new Single() , subroutine , initialize);
+			return collection((superclass item) => (Single) item , () => new Single("") , subroutine , initialize);
 		}
 		public static Single individual(subroutine subroutine , System.Object[] initialize) {
-			return individual((superclass item) => (Single) item , () => new Single() , subroutine , initialize);
+			return individual((superclass item) => (Single) item , () => new Single("") , subroutine , initialize);
 		}
+		public System.String name;
 		public System.Single value;
-		public Single() {
+		public Single(System.String name) {
+			this.name = name;
 			this.value = 0;
 		}
-		public Single(System.Single value) {
+		public Single(System.String name , System.Single value) {
+			this.name = name;
 			this.value = value;
 		}
 		public override System.Boolean Equals(System.Object Object) {

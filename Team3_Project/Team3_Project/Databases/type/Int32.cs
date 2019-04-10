@@ -1,16 +1,19 @@
 ﻿namespace Team3_Project.Databases.type {
 	public class Int32 : abstraction {
 		public static Int32[] collection(subroutine subroutine , System.Object[] initialize) {
-			return collection((superclass item) => (Int32) item , () => new Int32() , subroutine , initialize);
+			return collection((superclass item) => (Int32) item , () => new Int32("") , subroutine , initialize);
 		}
 		public static Int32 individual(subroutine subroutine , System.Object[] initialize) {
-			return individual((superclass item) => (Int32) item , () => new Int32() , subroutine , initialize);
+			return individual((superclass item) => (Int32) item , () => new Int32("") , subroutine , initialize);
 		}
+		public System.String name;
 		public System.Int32 value;
-		public Int32() {
+		public Int32(System.String name) {
+			this.name = name;
 			this.value = 0;
 		}
-		public Int32(System.Int32 value) {
+		public Int32(System.String name , System.Int32 value) {
+			this.name = name;
 			this.value = value;
 		}
 		public override System.Boolean Equals(System.Object Object) {

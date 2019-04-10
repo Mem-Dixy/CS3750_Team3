@@ -20,15 +20,15 @@
 		public type.String types;
 		public type.String attributes;
 		public type.Boolean isOriginalTitle;
-		private title_akas() : base(nameof(memdixyp_imdb) , nameof(title_akas)) {
-			this.titleId = new type.String();
-			this.ordering = new type.Byte();
-			this.title = new type.String();
-			this.region = new type.String();
-			this.language = new type.String();
-			this.types = new type.String();
-			this.attributes = new type.String();
-			this.isOriginalTitle = new type.Boolean();
+		private title_akas() : base("memdixyp_imdb" , "title_akas") {
+			this.titleId = new type.String("titleId");
+			this.ordering = new type.Byte("ordering");
+			this.title = new type.String("title");
+			this.region = new type.String("region");
+			this.language = new type.String("language");
+			this.types = new type.String("types");
+			this.attributes = new type.String("attributes");
+			this.isOriginalTitle = new type.Boolean("isOriginalTitle");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {

@@ -1,16 +1,19 @@
 ﻿namespace Team3_Project.Databases.type {
 	public class DateTime : abstraction {
 		public static DateTime[] collection(subroutine subroutine , System.Object[] initialize) {
-			return collection((superclass item) => (DateTime) item , () => new DateTime() , subroutine , initialize);
+			return collection((superclass item) => (DateTime) item , () => new DateTime("") , subroutine , initialize);
 		}
 		public static DateTime individual(subroutine subroutine , System.Object[] initialize) {
-			return individual((superclass item) => (DateTime) item , () => new DateTime() , subroutine , initialize);
+			return individual((superclass item) => (DateTime) item , () => new DateTime("") , subroutine , initialize);
 		}
+		public System.String name;
 		public System.DateTime value;
-		public DateTime() {
+		public DateTime(System.String name) {
+			this.name = name;
 			this.value = System.DateTime.UtcNow;
 		}
-		public DateTime(System.DateTime value) {
+		public DateTime(System.String name , System.DateTime value) {
+			this.name = name;
 			this.value = value;
 		}
 		public override System.Boolean Equals(System.Object Object) {

@@ -21,16 +21,16 @@
 		public type.Int16 endYear;
 		public type.Int32 runtimeMinutes;
 		public type.String genres;
-		private title_basics() : base(nameof(memdixyp_imdb) , nameof(title_basics)) {
-			this.tconst = new type.String();
-			this.titleType = new type.String();
-			this.primaryTitle = new type.String();
-			this.originalTitle = new type.String();
-			this.isAdult = new type.Boolean();
-			this.startYear = new type.Int16();
-			this.endYear = new type.Int16();
-			this.runtimeMinutes = new type.Int32();
-			this.genres = new type.String();
+		private title_basics() : base("memdixyp_imdb" , "title_basics") {
+			this.tconst = new type.String("tconst");
+			this.titleType = new type.String("titleType");
+			this.primaryTitle = new type.String("primaryTitle");
+			this.originalTitle = new type.String("originalTitle");
+			this.isAdult = new type.Boolean("isAdult");
+			this.startYear = new type.Int16("startYear");
+			this.endYear = new type.Int16("endYear");
+			this.runtimeMinutes = new type.Int32("runtimeMinutes");
+			this.genres = new type.String("genres");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {

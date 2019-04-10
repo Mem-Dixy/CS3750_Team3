@@ -15,10 +15,10 @@
 		public type.String tconst;
 		public type.String directors;
 		public type.String writers;
-		private title_crew() : base(nameof(memdixyp_imdb) , nameof(title_crew)) {
-			this.tconst = new type.String();
-			this.directors = new type.String();
-			this.writers = new type.String();
+		private title_crew() : base("memdixyp_imdb" , "title_crew") {
+			this.tconst = new type.String("tconst");
+			this.directors = new type.String("directors");
+			this.writers = new type.String("writers");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {

@@ -14,9 +14,9 @@
 		}
 		public type.String tconst;
 		public type.String poster;
-		private posters() : base(nameof(memdixyp_film) , "poster") {
-			this.tconst = new type.String();
-			this.poster = new type.String();
+		private posters() : base("memdixyp_film" , "poster") {
+			this.tconst = new type.String("tconst");
+			this.poster = new type.String("poster");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {

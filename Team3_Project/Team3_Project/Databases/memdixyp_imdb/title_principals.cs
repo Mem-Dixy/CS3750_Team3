@@ -18,13 +18,13 @@
 		public type.String category;
 		public type.String job;
 		public type.String characters;
-		private title_principals() : base(nameof(memdixyp_imdb) , nameof(title_principals)) {
-			this.tconst = new type.String();
-			this.ordering = new type.Int16();
-			this.nconst = new type.String();
-			this.category = new type.String();
-			this.job = new type.String();
-			this.characters = new type.String();
+		private title_principals() : base("memdixyp_imdb" , "title_principals") {
+			this.tconst = new type.String("tconst");
+			this.ordering = new type.Int16("ordering");
+			this.nconst = new type.String("nconst");
+			this.category = new type.String("category");
+			this.job = new type.String("job");
+			this.characters = new type.String("characters");
 		}
 		protected override System.String[] columns() {
 			return new System.String[] {

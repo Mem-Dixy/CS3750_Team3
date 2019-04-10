@@ -1,16 +1,19 @@
 ﻿namespace Team3_Project.Databases.type {
 	public class Boolean : abstraction {
 		public static Boolean[] collection(subroutine subroutine , System.Object[] initialize) {
-			return collection((superclass item) => (Boolean) item , () => new Boolean() , subroutine , initialize);
+			return collection((superclass item) => (Boolean) item , () => new Boolean("") , subroutine , initialize);
 		}
 		public static Boolean individual(subroutine subroutine , System.Object[] initialize) {
-			return individual((superclass item) => (Boolean) item , () => new Boolean() , subroutine , initialize);
+			return individual((superclass item) => (Boolean) item , () => new Boolean("") , subroutine , initialize);
 		}
+		public System.String name;
 		public System.Boolean value;
-		public Boolean() {
+		public Boolean(System.String name) {
+			this.name = name;
 			this.value = false;
 		}
-		public Boolean(System.Boolean value) {
+		public Boolean(System.String name , System.Boolean value) {
+			this.name = name;
 			this.value = value;
 		}
 		public override System.Boolean Equals(System.Object Object) {
